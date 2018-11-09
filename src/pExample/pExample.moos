@@ -1,0 +1,34 @@
+//------------------------------------------------
+// pExample config block
+
+SeverHost = localhost
+SverPort = 9000
+Community =test
+
+ProcessConfig = ANTLER
+{
+ MSBetweenLaunches = 200
+
+Run =MOOSDB   @ NewConsole =false
+Run =uXMS     @ NewConsole =true
+Run =pExample @ NewConsole =false
+
+}
+
+ProcessConfig = uXMS
+{
+  AppTick   =4
+  CommsTick =4
+
+  var = PUB_TEST
+
+}
+
+
+
+ProcessConfig = pExample
+{
+   AppTick   = 1
+   CommsTick = 4
+}
+
