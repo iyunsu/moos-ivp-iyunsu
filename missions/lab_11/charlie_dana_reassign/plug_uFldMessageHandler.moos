@@ -1,0 +1,12 @@
+//--------------------------------------------------
+// uFldMessageHandler configuration block from plugin
+
+ProcessConfig = uFldMessageHandler                              
+{                                                               
+  AppTick   = 2                                                 
+  CommsTick = 2                                                 
+                                                                
+  strict_addressing = false  // default                         
+//  appcast_trunc_msg = 75     // default: the number of chars per
+                             // line in the appcasting output
+}
