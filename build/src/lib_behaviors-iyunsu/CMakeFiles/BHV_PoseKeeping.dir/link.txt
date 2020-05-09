@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fPIC -g  -shared -Wl,-soname,libBHV_PoseKeeping.so -o ../../../lib/libBHV_PoseKeeping.so CMakeFiles/BHV_PoseKeeping.dir/BHV_PoseKeeping.cpp.o  -L/home/iyunsu/moos-ivp/lib -Wl,-rpath,/home/iyunsu/moos-ivp/lib -lhelmivp -lbehaviors -livpbuild -llogic -livpcore -lbhvutil -lmbutil -lgeometry -lm 
