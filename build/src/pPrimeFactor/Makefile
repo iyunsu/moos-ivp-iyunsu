@@ -125,6 +125,33 @@ pPrimeFactor/fast:
 	cd /home/iyunsu/moos-ivp-iyunsu/build && $(MAKE) -f src/pPrimeFactor/CMakeFiles/pPrimeFactor.dir/build.make src/pPrimeFactor/CMakeFiles/pPrimeFactor.dir/build
 .PHONY : pPrimeFactor/fast
 
+Mydata.o: Mydata.cpp.o
+
+.PHONY : Mydata.o
+
+# target to build an object file
+Mydata.cpp.o:
+	cd /home/iyunsu/moos-ivp-iyunsu/build && $(MAKE) -f src/pPrimeFactor/CMakeFiles/pPrimeFactor.dir/build.make src/pPrimeFactor/CMakeFiles/pPrimeFactor.dir/Mydata.cpp.o
+.PHONY : Mydata.cpp.o
+
+Mydata.i: Mydata.cpp.i
+
+.PHONY : Mydata.i
+
+# target to preprocess a source file
+Mydata.cpp.i:
+	cd /home/iyunsu/moos-ivp-iyunsu/build && $(MAKE) -f src/pPrimeFactor/CMakeFiles/pPrimeFactor.dir/build.make src/pPrimeFactor/CMakeFiles/pPrimeFactor.dir/Mydata.cpp.i
+.PHONY : Mydata.cpp.i
+
+Mydata.s: Mydata.cpp.s
+
+.PHONY : Mydata.s
+
+# target to generate assembly for a file
+Mydata.cpp.s:
+	cd /home/iyunsu/moos-ivp-iyunsu/build && $(MAKE) -f src/pPrimeFactor/CMakeFiles/pPrimeFactor.dir/build.make src/pPrimeFactor/CMakeFiles/pPrimeFactor.dir/Mydata.cpp.s
+.PHONY : Mydata.cpp.s
+
 PrimeFactor.o: PrimeFactor.cpp.o
 
 .PHONY : PrimeFactor.o
@@ -215,6 +242,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... pPrimeFactor"
 	@echo "... edit_cache"
+	@echo "... Mydata.o"
+	@echo "... Mydata.i"
+	@echo "... Mydata.s"
 	@echo "... PrimeFactor.o"
 	@echo "... PrimeFactor.i"
 	@echo "... PrimeFactor.s"

@@ -1,0 +1,1 @@
+/usr/bin/c++   -fPIC -g  -rdynamic CMakeFiles/pPoseKeep.dir/PoseKeep.cpp.o CMakeFiles/pPoseKeep.dir/PoseKeep_Info.cpp.o CMakeFiles/pPoseKeep.dir/main.cpp.o  -o ../../../bin/pPoseKeep  -L/home/iyunsu/moos-ivp/lib -Wl,-rpath,/home/iyunsu/moos-ivp/lib /home/iyunsu/Desktop/moos-ivp/build/MOOS/MOOSCore/lib/libMOOS.a -lapputil -lgeometry -lmbutil -lm -lpthread 
