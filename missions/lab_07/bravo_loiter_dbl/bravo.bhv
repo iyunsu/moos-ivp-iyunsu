@@ -1,0 +1,155 @@
+//--------    FILE: bravo.bhv   -------------
+
+initialize   DEPLOY = false
+initialize   RETURN = false
+initialize   LOITER_REGION = west	
+//----------------------------------------------
+//----------------------------------------------
+Behavior=BHV_Waypoint
+{
+  name       = waypt_return
+  pwt        = 100
+  condition  = RETURN = true
+  condition  = DEPLOY = true
+  condition  = LOITER_REGION = east
+  perpetual  = true
+  updates    = RETURN_UPDATE
+  endflag    = RETURN = false
+  endflag    = DEPLOY = false
+  endflag    = MISSION = complete
+  endflag    = LOITER_REGION = east
+	
+           speed = 2.0
+  capture_radius = 2.0
+     slip_radius = 8.0
+          points = 0,0
+ }
+
+//----------------------------------------------
+//Behavior=BHV_ConstantSpeed
+//{
+//  name       = const_speed
+//  pwt        = 200
+//  condition  = SPD=true
+//  condition  = DEPLOY = true
+//  perpetual  = true
+//  updates    = SPEED_UPDATE
+//  endflag    = SPD = false
+//
+//     speed = 0.5
+//		 duration = 10
+//		 duration_reset = CONST_SPD_RESET=true
+//	
+//}
+
+//----------------------------------------------
+Behavior = BHV_Loiter
+ {
+   // General Behavior Parameters
+   // ---------------------------
+   name         = east             // example
+   pwt          = 150                   // default
+    //condition    = MODE==LOITERING       // example
+   condition    = DEPLOY = true
+   condition    = RETURN =false
+   condition    = LOITER_REGION = east
+   updates      = LOITER_UPDATES        // example
+   duration     = 100
+   duration_idle_decay = false
+   perpetual    = true
+   endflag      = RETURN = false
+   endflag      = DEPLOY= true
+   endflag      = LOITER_REGION = west
+   // Parameters specific to this behavior
+   // ------------------------------------
+    acquire_dist = 10               // default
+    capture_radius = 3                // default  
+    center_activate = false            // default
+    clockwise = true             // default
+    slip_radius = 15               // default
+    speed = 12.5                // default
+    spiral_factor = -2               // default
+
+    polygon = radial:: x=160,y=-50,radius=20,pts=8  // example
+    post_suffix = HENRY                             // example
+
+    // center_assign = 40,50            // example 
+}
+
+
+//----------------------------------------------
+Behavior = BHV_Loiter
+ {
+   // General Behavior Parameters
+   // ---------------------------
+   name         = west               // example
+   pwt          = 100                   // default
+   //condition    = MODE==LOITERING       // example
+   condition    = DEPLOY = true
+   condition    = RETURN = false
+   condition    = LOITER_REGION = west
+   updates      = LOITER_UPDATES        // example
+   duration     = 150
+   duration_idle_decay = false
+   perpetual    = true
+   endflag      = RETURN = false
+   endflag      = DEPLOY= true
+   endflag      = LOITER_REGION = east
+   // Parameters specific to this behavior
+   // ------------------------------------
+    acquire_dist = 10               // default
+    capture_radius = 3                // default  
+    center_activate = false            // default
+    clockwise = false            // default
+    slip_radius = 15               // default
+    speed = 12.5                // default
+    spiral_factor = -2               // default
+
+    polygon = radial:: x=100,y=-75,radius=30,pts=8  // example
+    post_suffix = HENRY                             // example
+
+    // center_assign = 40,50            // example 
+}
+
+//----------------------------------------------------
+Behavior = BHV_ConstantDepth
+ {
+   // General Behavior Parameters
+   // ---------------------------
+   name         = west_dep_survey   // example
+   pwt          = 100                // default
+   //condition    = MODE==SURVEYING    // example
+   condition    = LOITER_REGION =west
+   updates      = CONST_DEP_UPDATES  // example
+
+   // Parameters specific to this behavior
+   // ------------------------------------
+            basewidth = 100          // default
+                depth = 30            // default
+   depth_mismatch_var = DEPTH_DIFF   // example
+             duration = no-time-limit // default
+            peakwidth = 3            // default
+          summitdelta = 50           // default
+ }
+
+//----------------------------------------------------
+Behavior = BHV_ConstantDepth
+ {
+   // General Behavior Parameters
+   // ---------------------------
+   name         = east_dep_survey   // example
+   pwt          = 100                // default
+   //condition    = MODE==SURVEYING    // example
+   condition    = LOITER_REGION = east
+   updates      = CONST_DEP_UPDATES  // example
+
+   // Parameters specific to this behavior
+   // ------------------------------------
+            basewidth = 100          // default
+                depth = 30            // default
+   depth_mismatch_var = DEPTH_DIFF   // example
+             duration = no-time-limit // default
+            peakwidth = 3            // default
+          summitdelta = 50           // default
+ }
+
