@@ -15,6 +15,7 @@ INCLUDE_DIRECTORIES(${LOCAL_LIBRARY_DIRS})
 # List the subdirectories to build...
 #============================================================================
 ADD_SUBDIRECTORY(lib_behaviors-test)
+ADD_SUBDIRECTORY(lib_behaviors-iyunsu)
 ADD_SUBDIRECTORY(pXRelayTest)
 ADD_SUBDIRECTORY(pExampleApp)
 ADD_SUBDIRECTORY(pPrimeFactor)
@@ -22,6 +23,12 @@ ADD_SUBDIRECTORY(pPrimeFactor)
 ADD_SUBDIRECTORY(pOdometry)
 ADD_SUBDIRECTORY(pExample)
 ADD_SUBDIRECTORY(pNumberCalp)
+ADD_SUBDIRECTORY(pPointAssign)
+#ADD_SUBDIRECTORY(pGenPath)
+ADD_SUBDIRECTORY(uFldHazardMgrX)
+ADD_SUBDIRECTORY(uFldHazardMgrXII)
+ADD_SUBDIRECTORY(pAngleEstimate)
+ADD_SUBDIRECTORY(pPoseKeep)
 
 ##############################################################################
 #                           END of CMakeLists.txt
