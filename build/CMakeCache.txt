@@ -17,7 +17,25 @@
 ARCHIVE_OUTPUT_DIRECTORY:PATH=/home/iyunsu/moos-ivp-iyunsu/lib
 
 //Dependencies for the target
+BHV_Front_LIB_DEPENDS:STATIC=general;helmivp;general;behaviors;general;ivpbuild;general;logic;general;ivpcore;general;bhvutil;general;mbutil;general;geometry;general;m;
+
+//Dependencies for the target
+BHV_PolygonV2_LIB_DEPENDS:STATIC=general;helmivp;general;behaviors;general;ivpbuild;general;logic;general;ivpcore;general;bhvutil;general;mbutil;general;geometry;general;m;
+
+//Dependencies for the target
+BHV_PoseKeeping_LIB_DEPENDS:STATIC=general;helmivp;general;behaviors;general;ivpbuild;general;logic;general;ivpcore;general;bhvutil;general;mbutil;general;geometry;general;m;
+
+//Dependencies for the target
+BHV_Pulse_LIB_DEPENDS:STATIC=general;helmivp;general;behaviors;general;ivpbuild;general;logic;general;ivpcore;general;bhvutil;general;mbutil;general;geometry;general;m;
+
+//Dependencies for the target
 BHV_SimpleWaypoint_LIB_DEPENDS:STATIC=general;helmivp;general;behaviors;general;ivpbuild;general;logic;general;ivpcore;general;bhvutil;general;mbutil;general;geometry;general;m;
+
+//Dependencies for the target
+BHV_ZigLeg_LIB_DEPENDS:STATIC=general;helmivp;general;behaviors;general;ivpbuild;general;logic;general;ivpcore;general;bhvutil;general;mbutil;general;geometry;general;m;
+
+//Dependencies for the target
+BHV_example_LIB_DEPENDS:STATIC=general;helmivp;general;behaviors;general;ivpbuild;general;logic;general;ivpcore;general;bhvutil;general;mbutil;general;geometry;general;m;
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
@@ -206,8 +224,14 @@ MOOS_DIR:PATH=/home/iyunsu/Desktop/moos-ivp/build/MOOS/MOOSCore
 
 RUNTIME_OUTPUT_DIRECTORY:PATH=/home/iyunsu/moos-ivp-iyunsu/bin
 
+//Dependencies for target
+SHARED_LIB_DEPENDS:STATIC=
+
 //tell me about all compiler warnings (-Wall) 
 WALL_ON:BOOL=OFF
+
+//Dependencies for the target
+{BHV_example}_LIB_DEPENDS:STATIC=general;helmivp;general;behaviors;general;ivpbuild;general;logic;general;ivpcore;general;bhvutil;general;mbutil;general;geometry;general;m;
 
 
 ########################
@@ -308,7 +332,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
