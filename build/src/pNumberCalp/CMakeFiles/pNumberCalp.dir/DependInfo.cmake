@@ -44,6 +44,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/iyunsu/moos-ivp/ivp/src/lib_ufield"
   "/home/iyunsu/moos-ivp/ivp/src/lib_ufld_hazards"
   "/home/iyunsu/moos-ivp/ivp/src/lib_zaicview"
+  "../src/./lib_behaviors-iyunsu"
   "../src/./lib_behaviors-test"
   )
 
