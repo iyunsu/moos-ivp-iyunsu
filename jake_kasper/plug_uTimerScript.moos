@@ -1,0 +1,16 @@
+ ProcessConfig = uTimerScript
+ {
+   AppTick    = 2
+   CommsTick  = 2
+
+   condition  = RETURN=true
+  // randvar    = varname=YPOS, min=-125, max=0, key=at_reset
+
+   // THE BELOW EVENT ALL ON ONE LINE IN THE ACTUAL MOOS FILE
+
+   //event      = var=NODE_MESSAGE_LOCAL, val="src_node=$(VNAME),dest_node=all,var_name=UHZ_DETECTION_REPORT,string_val="x=1,y=10,label=100"" 
+   //event      = var=NODE_MESSAGE_LOCAL, val="src"
+
+   reset_max = nolimit
+   reset_time = all-posted
+ }
